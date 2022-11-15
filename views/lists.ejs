@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+
+    <div class="box" id="heading">
+        <h1><%= listtitle %></h1> 
+    </div>
+
+    <div class="box">
+        
+          <%  for (var i=0; i<addarray.length; i++) {  %> 
+            <div class="item">
+                <input type="checkbox">    
+            <p><%= addarray[i] %></p> 
+            </div>  
+           <% } %> 
+           <form class="item" action="/" method="post" >
+               <input type="text" name="addtodo" placeholder="Add your next To Do" autocomplete="off">
+               <button type="submit" name="list" value=<%=listtitle %> >+</button>
+           </form>
+    </div>
+
+
+<%- include('footer'); -%>
